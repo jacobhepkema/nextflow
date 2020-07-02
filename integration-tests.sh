@@ -25,7 +25,7 @@ if [ ${X_JDK} -gt 8 ]; then
   chmod +x install-jdk.sh
   source ./install-jdk.sh -f $TEST_JDK -c --target $JAVA_HOME || ( echo Failed to configure Java $TEST_JDK && exit 1 )
 fi
-
+set -x
 export WITH_DOCKER='-with-docker'
 export NXF_CMD=$PWD/nextflow;
 export CAPSULE_LOG=none
