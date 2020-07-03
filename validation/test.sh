@@ -1,6 +1,5 @@
 #!/bin/bash 
 set -e 
-set -x
 
 get_abs_filename() {
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
